@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-size: 12px; */
+}
+
+[v-cloak] {
+  display: none;
+}
+
+.keyboard-shortcuts .shortcuts-header {
+  position: relative;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOSI+PHBhdGggZmlsbD0iIzAwMCIgZD0iTTIxIDBsLTExIDEyLTcuMzMzLTUuNjY2LTIuNjY3IDEuNjgydjEzLjk4NGwyLjY2NyAxLjY2NiA3LjMzMy01LjY2NiAxMSAxMSA3LTN2LTIyLjMzM2wtNy0zLjY2N3ptLTE4IDE5di05bDQgNS00IDR6bTExLTRsNy02djEybC03LTZ6Ii8+PC9zdmc+);
+  background-size: 42px;
+  background-repeat: no-repeat;
+  padding-left: 60px;
+}
+
+/* js代码运行展示模块 */
+
+iframe:not(.sample-code-frame) {
+  border: 0;
+}
+.main-page-content iframe {
+  max-width: 100%;
+  width: 100%;
+}
+.interactive {
+  background-color: #f4f4f4;
+  border: 1px solid #d5d5d5;
+  color: #1b1b1b;
+  padding: 10px;
+  width: 100%;
+}
+iframe {
+  height: 490px;
+}

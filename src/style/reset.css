@@ -1,0 +1,39 @@
+/*  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  /* font-family: consolas, Tahoma, Arial, Helvetica Neue, Helvetica, sans-serif, "PingFang SC"; */
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
+  font-size: 12px;
+  /* letter-spacing: 0.5px; */
+}
+
+[v-cloak] {
+  display: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.bold {
+  font-weight: bold !important;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}

@@ -5,7 +5,7 @@ import { resolve } from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  base: './', // 设置打包路径
+  base: '/keymap-api-vue3/', // 设置打包路径
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'), // 设置 `@` 指向 `src` 目录

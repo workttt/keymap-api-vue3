@@ -12,20 +12,20 @@ export const API_LIST = [
     name: 'JavaScript',
     showDetail: true,
     ico: jsIcon,
-    child: ['Array', 'String', 'Object', 'Set', 'Map', 'Number', 'Math', 'Promise', 'Location']
+    child: ['Array', 'String', 'Object', 'Set', 'Map', 'Number', 'Math', 'Promise', 'Location', 'Proxy']
   },
   // {
   //   name: 'CSS',
   //   showDetail: true,
   //   ico: cssIcon,
-  //   child: ['animation', 'selectors'],
+  //   child: ['animation', 'Selectors'],
   // },
   {
     id: 'CSS',
     name: 'CSS',
     showDetail: false,
     ico: cssIcon,
-    child: ['selectors']
+    child: ['Selectors']
   },
   // {
   //   name: 'HTTP',

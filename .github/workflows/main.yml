@@ -4,59 +4,27 @@ name: deploy-website
 # 触发机制
 on: 
   push: 
-    branches: [ main, gh-page ]
-    
+    branches: 
+      - main
+      
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      # 下载源码
-      - name: Checkout
-        uses: actions/checkout@master
-
-      # 打包构建
-      - name: Build
-        uses: actions/setup-node@master
-      - run: npm install
-      - run: npm run build
-      - run: tar -zcvf release.tgz .nuxt static nuxt.config.js package.json package-lock.json pm2.config.json
-
-      # 发布 Release
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
         with:
-          node-version: "12.x"
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          draft: false
-          prerelease: false
+          persist-credentials: false
 
-      # 上传构建结果到 Release
-      - name: Upload Release Asset
-        id: upload-release-asset
-        uses: actions/upload-release-asset@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./release.tgz
-          asset_name: release.tgz
-          asset_content_type: application/x-tgz
+      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+        run: |
+          yarn
+          yarn build
+          cp dist/index.html dist/404.html
 
-      # 部署到服务器
-      - name: Deploy
-        uses: appleboy/ssh-action@master
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          port: ${{ secrets.PORT }}
-          script: |
-            cd /usr/local/xlf-realworld-nuxtjs
-            wget https://github.com/xionglaifu/xlf-realworld-nuxtjs/releases/latest/download/release.tgz -O release.tgz
-            tar zxvf release.tgz
-            npm install --production
-            pm2 reload pm2.config.json
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          branch: gh-pages
+          folder: dist

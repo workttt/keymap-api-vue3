@@ -12,7 +12,7 @@ export const API_LIST = [
     name: 'JavaScript',
     showDetail: true,
     ico: jsIcon,
-    child: ['Array', 'String', 'Object', 'Set', 'Map', 'Number', 'Math', 'Promise', 'Location', 'Proxy']
+    child: ['Array', 'String', 'Object', 'Set', 'Map', 'Number', 'Math', 'Promise', 'Location', 'Proxy','Blob','File']
   },
   // {
   //   name: 'CSS',

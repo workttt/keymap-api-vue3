@@ -10,6 +10,4 @@ for (const path in modules) {
   // })
 }
 
-console.log(API_JSON_LIST)
-
 export default API_JSON_LIST

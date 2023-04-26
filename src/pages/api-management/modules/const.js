@@ -12,28 +12,28 @@ export const API_LIST = [
     name: 'JavaScript',
     showDetail: true,
     ico: jsIcon,
-    child: ['Array', 'String', 'Object', 'Set', 'Map', 'Number', 'Math', 'Promise', 'Location', 'Proxy','Blob','File']
+    child: ['Array', 'String', 'Object', 'Set', 'Map', 'Number','Function', 'Math', 'Promise', 'Location', 'Proxy','Blob','File']
   },
-  // {
-  //   name: 'CSS',
-  //   showDetail: true,
-  //   ico: cssIcon,
-  //   child: ['animation', 'Selectors'],
-  // },
   {
-    id: 'CSS',
     name: 'CSS',
-    showDetail: false,
+    showDetail: true,
     ico: cssIcon,
-    child: ['Selectors']
+    child: ['animation', 'selectors'],
   },
-  // {
-  //   name: 'HTTP',
-  //   showDetail: false,
-  //   ico: httpIcon,
-  //   child: ['HTTP_STATUS_CODE'],
-  //   urlFn: true,
-  // },
+  {
+    name: 'VUE',
+    showDetail: false,
+    ico: vueIcon,
+    child: ['响应性API'],
+    urlFn: 'page/vue/vue3.html',
+  },
+  {
+    name: 'HTTP',
+    showDetail: false,
+    ico: httpIcon,
+    child: ['HTTP_STATUS_CODE'],
+    urlFn: true,
+  },
   {
     id: 'operator',
     name: '运算符-operator',
@@ -41,5 +41,18 @@ export const API_LIST = [
     ico: operator,
     child: ['operator']
   },
-
+  {
+    name: 'Editor keymap',
+    showDetail: false,
+    ico: vscodeIcon,
+    child: ['vscode'],
+    urlFn: 'page/编辑器/vscode.html',
+  },
+  {
+    name: '语言对比',
+    showDetail: false,
+    ico: codeIcon,
+    child: ['java javascript'],
+    urlFn: 'page/base/datatype.html',
+  },
 ]

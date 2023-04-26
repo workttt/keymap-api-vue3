@@ -1,5 +1,5 @@
 export default {
-  subtitle: 'Selectors',
+  subtitle: 'selectors',
   desc: '  css选择器',
   types: [
     {

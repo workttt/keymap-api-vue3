@@ -88,7 +88,6 @@ export default {
       console.log('路由入参：', route.currentRoute.value)
       // xxx.value 的语法来改变ref声明的值
       apiName.value = route.currentRoute.value.params?.type || route.currentRoute.value.query.type
-      console.log(111, apiName.value)
     })
 
     watch(apiName, (count, prevCount) => {
